@@ -1,0 +1,55 @@
+{
+    "AscensionModeDescriptions": {
+    "TEXT": [
+        "Normal enemies are less deadly.",
+        "Elites are less deadly.",
+        "Bosses are less deadly.",
+        "Normal enemies are less tough.",
+        "Elites are less tough.",
+        "Bosses are less tough.",
+        "Upgraded cards appear more often.",
+        "Richer bosses.",
+        "Higher Max HP.",
+        "Shops cost less.",
+        "Gain Max HP when you defeat a boss.",
+        "You gain 20% more gold.",
+        "Healing is 40% more effective.",
+        "Normal enemies now have 20% chance to drop a relic.",
+        "Elites now drop 1 more card.",
+        "Bosses now drop 1 more rare relic.",
+        "All combat rewards now contain 1 more potion.",
+        "Start each combat with 1 more max energy.",
+        "Draw 1 more card each turn.",
+        "(Minimum Level) All cards in your starting deck are upgraded; all non-boss chests contain an extra relic."
+    ]
+  },
+  "AscensionPlusMod": {
+    "TEXT": [
+        "Elites spawn more often.",
+        "Normal enemies are deadlier.",
+        "Elites are deadlier.",
+        "Bosses are deadlier.",
+        "Heal less after Boss battles.",
+        "Start each run damaged.",
+        "Normal enemies are tougher.",
+        "Elites are tougher.",
+        "Bosses are tougher.",
+        "Start each run cursed.",
+        "Fewer Potion Slots.",
+        "Upgraded cards appear less often.",
+        "Poor bosses.",
+        "Lower Max HP.",
+        "Unfavorable Events.",
+        "Shops are more costly.",
+        "Normal enemies have more challenging movesets and abilities.",
+        "Elites have more challenging movesets and abilities.",
+        "Bosses have more challenging movesets and abilities.",
+        "Double Boss.",
+        "Merchant's card removal now costs more.",
+        "You gain 15% less gold.",
+        "Healing is 20% less effective.",
+        "Ascender's bane is no longer ethereal.",
+        "(Max Level) Opening boss chests now gives you a random curse. "
+    ]
+  }
+}

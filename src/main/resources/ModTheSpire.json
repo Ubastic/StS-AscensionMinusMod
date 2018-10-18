@@ -1,0 +1,12 @@
+{
+  "modid": "AscensionMinus",
+  "name": "Ascension -",
+  "author_list": ["yhrcyt"],
+  "description": "Make the game easier!",
+  "dependencies": ["basemod"],
+  "version": "0.0.1",
+  "credits": "",
+  "sts_version": "10-11-2018",
+  "mts_version": "3.3.0",
+  "update_json": "https://api.github.com/repos/yhrcyt/StS-AscensionMinusMod/releases/latest"
+}
