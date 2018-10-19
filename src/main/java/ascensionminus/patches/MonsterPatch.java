@@ -32,12 +32,10 @@ public class MonsterPatch {
 				if (AbstractDungeon.ascensionLevel <= -1 && ((AbstractMonster) damageSource).type == EnemyType.NORMAL) {
 					__instance.base = MathUtils.ceil(__instance.base * 0.75F);
 					__instance.output = __instance.base;
-				}
-				if (AbstractDungeon.ascensionLevel <= -2 && ((AbstractMonster) damageSource).type == EnemyType.ELITE) {
+				} else if (AbstractDungeon.ascensionLevel <= -2 && ((AbstractMonster) damageSource).type == EnemyType.ELITE) {
 					__instance.base = MathUtils.ceil(__instance.base * 0.75F);
 					__instance.output = __instance.base;
-				}
-				if (AbstractDungeon.ascensionLevel <= -3 && ((AbstractMonster) damageSource).type == EnemyType.BOSS) {
+				} else if (AbstractDungeon.ascensionLevel <= -3 && ((AbstractMonster) damageSource).type == EnemyType.BOSS) {
 					__instance.base = MathUtils.ceil(__instance.base * 0.75F);
 					__instance.output = __instance.base;
 				}

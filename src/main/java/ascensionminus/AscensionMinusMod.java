@@ -20,7 +20,6 @@ public class AscensionMinusMod implements ISubscriber {
 	// if we wanna get it to work with asc+ mod, we need a kind of interface to define max & min asc lvl
 	public static final int MIN_ASC_LVL = -20;
 	public static final int MAX_ASC_LVL = 20;
-	public static int AbsoluteAscensionLevel;
 
 	public AscensionMinusMod() {
 		BaseMod.subscribe(this);

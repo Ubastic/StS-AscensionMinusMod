@@ -5,3 +5,4 @@ pom.xml
 .settings/*
 target/*
 *.class
+/target/

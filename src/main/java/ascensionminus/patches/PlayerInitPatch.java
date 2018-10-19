@@ -10,6 +10,9 @@ public class PlayerInitPatch {
 	public static class PlayerInit {
 		@SpireInsertPatch(loc = 3089)
 		public static void Insert() {
+			if (AbstractDungeon.ascensionLevel <= -9) {
+				AbstractDungeon.player.increaseMaxHp(AbstractDungeon.player.getAscensionMaxHPLoss(), false);
+			}
 			if (AbstractDungeon.ascensionLevel <= -18) {
 				AbstractDungeon.player.energy.energyMaster++;
 			}
