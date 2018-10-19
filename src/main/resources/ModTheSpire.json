@@ -4,7 +4,7 @@
   "author_list": ["yhrcyt"],
   "description": "Make the game easier!",
   "dependencies": ["basemod"],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "credits": "",
   "sts_version": "10-18-2018",
   "mts_version": "3.4.0",

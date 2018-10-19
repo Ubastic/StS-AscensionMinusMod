@@ -3,14 +3,15 @@ package ascensionminus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+
 import basemod.BaseMod;
 import basemod.interfaces.ISubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 
 @SpireInitializer
-public class AscensionMinusMod implements ISubscriber {
+public class AscensionMinusMod implements ISubscriber, PostInitializeSubscriber {
 	public static final Logger logger = LogManager.getLogger(AscensionMinusMod.class.getName());
 	public static final String MOD_ID = "AscensionMinus";
 	private static final String MOD_NAME = "Ascension -";
@@ -30,10 +31,6 @@ public class AscensionMinusMod implements ISubscriber {
 	}
 
 	public void receivePostInitialize() {
-		Texture badgeTexture = ImageMaster.loadImage("images/badge.png");
-		BaseMod.registerModBadge(badgeTexture, MOD_NAME, AUTHOR, DESCRIPTION, null);
+		BaseMod.registerModBadge(ImageMaster.loadImage("images/AscMinusModBadge.png"), MOD_NAME, AUTHOR, DESCRIPTION, null);
 	}
-
-	// -------------------------- ASC CHANGES --------------------------
-
 }
