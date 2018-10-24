@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,13 +28,12 @@ import com.megacrit.cardcrawl.ui.panels.TopPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import ascensionminus.AscensionMinusMod;
-import basemod.BaseMod;
 
 public class AscensionPatch {
 	public static final Logger logger = LogManager.getLogger(AscensionPatch.class.getName());
 
 	@SuppressWarnings({ "unchecked" })
-	private static String[] AscensionLevels = ((Map<String, UIStrings>) BaseMod.gson.fromJson(
+	private static String[] AscensionLevels = ((Map<String, UIStrings>) new GsonBuilder().create().fromJson(
 			Gdx.files.internal("localization/AscensionDescription.json").readString(String.valueOf(StandardCharsets.UTF_8)),
 			new TypeToken<Map<String, UIStrings>>() {}.getType())).get("AscensionModeDescriptions").TEXT;
 	private static int tmpAscLvl;
@@ -75,7 +75,7 @@ public class AscensionPatch {
 
 	@SpirePatch(clz = CustomModeScreen.class, method = "renderAscension")
 	public static class CustomRenderPatch {
-		@SpireInsertPatch(rloc = 48)
+		@SpireInsertPatch(rloc = 47)
 		public static void Insert(CustomModeScreen __instance, SpriteBatch sb) {
 			tmpAscLvl = __instance.ascensionLevel;
 			if (__instance.ascensionLevel < 0)
@@ -108,13 +108,11 @@ public class AscensionPatch {
 					return;
 				}
 
-				FontHelper
-						.renderSmartText(sb, FontHelper.charDescFont,
-								CardCrawlGame.mainMenuScreen.charSelectScreen.ascLevelInfoString = AscensionLevels[-__instance.ascensionLevel
-										- 1],
-								screenX + 475.0F * com.megacrit.cardcrawl.core.Settings.scale,
-								ascensionModeHb.cY + 10.0F * com.megacrit.cardcrawl.core.Settings.scale, 9999.0F,
-								32.0F * com.megacrit.cardcrawl.core.Settings.scale, com.megacrit.cardcrawl.core.Settings.CREAM_COLOR);
+				FontHelper.renderSmartText(sb, FontHelper.charDescFont,
+						CardCrawlGame.mainMenuScreen.charSelectScreen.ascLevelInfoString = AscensionLevels[-__instance.ascensionLevel - 1],
+						screenX + 475.0F * com.megacrit.cardcrawl.core.Settings.scale,
+						ascensionModeHb.cY + 10.0F * com.megacrit.cardcrawl.core.Settings.scale, 9999.0F,
+						32.0F * com.megacrit.cardcrawl.core.Settings.scale, com.megacrit.cardcrawl.core.Settings.CREAM_COLOR);
 			}
 		}
 	}
