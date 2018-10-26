@@ -4,9 +4,9 @@
   "author_list": ["yhrcyt"],
   "description": "Adds negative ascension, and a custom modifier that let you turn off blights.",
   "dependencies": [],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "credits": "",
-  "sts_version": "10-18-2018",
-  "mts_version": "3.4.0",
+  "sts_version": "10-25-2018",
+  "mts_version": "3.5.0",
   "update_json": "https://api.github.com/repos/yhrcyt/StS-AscensionMinusMod/releases/latest"
 }
